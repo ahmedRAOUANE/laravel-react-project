@@ -3,6 +3,9 @@ import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
+};
 export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
