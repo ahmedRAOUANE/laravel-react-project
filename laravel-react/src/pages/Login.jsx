@@ -1,9 +1,19 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const email = useRef();
+  const password = useRef();
 
   const submitHandler = (ev) => {
-    ev.prentDefaulte();
+    ev.preventDefault();
+
+    const payload = {
+      email: email.current.value,
+      password: password.current.value,
+    }
+
+    console.log(payload);
   }
 
   return (

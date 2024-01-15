@@ -9,19 +9,9 @@ import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home"
 
 export default function App() {
-  const logoutHandler = () => { }
   return (
-    <div>
-      <header>
-        <div className="container">
-          <h1>User List</h1>
-          <div className="button-container">
-            <div>ahmed</div>
-            <button className="button" onClick={logoutHandler}>logout</button>
-          </div>
-        </div>
-      </header>
-      <main>
+    <>
+      <div>
         <Routes>
           <Route path="/" element={<DefaultLayout />} >
             <Route path="/" element={<Home />} />
@@ -32,14 +22,13 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Route>
-
           <Route path="*" element={<NoFound />} />
         </Routes>
-      </main>
+      </div>
       <footer className="footer container">
         &copy;2024 by <span>ahmed raouane</span>. All rights reserved.
       </footer>
-    </div>
+    </>
   )
 }
 
